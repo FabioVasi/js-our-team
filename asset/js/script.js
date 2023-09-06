@@ -131,7 +131,7 @@ for (let i = 0; i < teamMembers.length; i++) {
     const markup = `
         <div class="col-lg-4">
             <div class="card mb-4">
-                <img class="card-img-top" src="${team['image']}" alt="">
+                <img class="card-img-top" src="asset/img/${team['image']}" alt="">
                 <h4 class="">${team['name']}</h4>
                 <p class="">${team['role']}</p>
             </div>
