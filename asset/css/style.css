@@ -9,6 +9,9 @@ body{
 h1{
     font-size: 4rem;
 }
+.card{
+    margin-bottom: 2rem;
+}
 img{
     height: 360px;
     object-fit: cover;
