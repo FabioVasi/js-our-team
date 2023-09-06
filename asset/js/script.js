@@ -62,6 +62,8 @@ Tools:
 
 */
 
+
+
 // creo un array contenente le info del team
 const teamMembers = [
     {
@@ -95,3 +97,31 @@ const teamMembers = [
         image: 'barbara-ramos-graphic-designer.jpg'
     }
 ]
+
+// creo una costante che mi consenta di aggiungere nuovi membri al team
+const newMembers = {
+    nome: '',
+    role: '',
+    image: ''
+}
+
+// pusho i nuovi membri
+teamMembers.push(newMembers);
+
+// loggo in console i dati dei membri del team
+//console.log(teamMembers);
+
+// creo un ciclo che renda dinamica l'aggiunta dei membri
+for (let i = 0; i < teamMembers.length; i++) {
+    
+    const team = teamMembers[i];
+
+    console.log(team);
+
+    console.log(team['name']);
+
+    console.log(team['role']);
+    
+    console.log(team['image']);
+
+}
