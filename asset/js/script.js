@@ -131,50 +131,15 @@ for (let i = 0; i < teamMembers.length; i++) {
     const markup = `
         <div class="col-lg-4">
             <div class="card mb-4">
-                <img class="card-img-top" src="./asset/img/wayne-barnett-founder-ceo.jpg" alt="">
+                <img class="card-img-top" src="${team['image']}" alt="">
                 <h4 class="">${team['name']}</h4>
                 <p class="">${team['role']}</p>
             </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="card">
-                <img class="card-img-top" src="./asset/img/angela-caroll-chief-editor.jpg" alt="">
-                <h4 class="">${team['name']}</h4>
-                <p class="">${team['role']}</p>
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="card">
-                <img class="card-img-top" src="./asset/img/walter-gordon-office-manager.jpg" alt="">
-                <h4 class="">${team['name']}</h4>
-                <p class="">${team['role']}</p>
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="card">
-                <img class="card-img-top" src="./asset/img/angela-lopez-social-media-manager.jpg" alt="">
-                <h4 class="">${team['name']}</h4>
-                <p class="">${team['role']}</p>
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="card">
-                <img class="card-img-top" src="./asset/img/scott-estrada-developer.jpg" alt="">
-                <h4 class="">${team['name']}</h4>
-                <p class="">${team['role']}</p>
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="card">
-                <img class="card-img-top" src="./asset/img/barbara-ramos-graphic-designer.jpg" alt="">
-                <h4 class="">${team['name']}</h4>
-                <p class="">${team['role']}</p>
-                </div>
         </div>`
     
     // loggo il markup in console
     //console.log(markup);
-
+    // stampo in pagina le card partendo dalla prima in ordine c
     rowDomElement.insertAdjacentHTML('beforeend', markup);
 
 }
