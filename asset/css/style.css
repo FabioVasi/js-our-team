@@ -11,8 +11,11 @@ h1{
 }
 .card{
     margin-bottom: 2rem;
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px 5px rgba(30, 30, 30, 0.2) ;
 }
 img{
-    height: 360px;
     object-fit: cover;
+    border-bottom: 1px solid black;
+    margin-bottom: 1rem;
 }

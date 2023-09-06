@@ -16,6 +16,9 @@ Trasformare la stringa foto in una immagine effettiva
 BONUS 2:
 Organizzare i singoli membri in card/schede
 
+BONUS AGGIUNTIVO:
+Aggiungete un form in pagina per permettere all’utente di aggiungere nuovi membri del team: cliccando sul pulsante “add” viene creato un nuovo oggetto, il quale viene inserito nell’array iniziale e viene stampata una nuova card con tutte le informazioni inserite dall’utente.
+
 Consigli del giorno:
 
 Ragioniamo come sempre a step. Prima la logica in italiano e poi traduciamo in codice.
@@ -58,7 +61,8 @@ Tools:
 - const / let
 - log
 - document.querySelector
-- .insertAdjacentHTML
+- insertAdjacentHTML
+- addEventListener
 
 */
 
@@ -130,7 +134,7 @@ for (let i = 0; i < teamMembers.length; i++) {
     // creo una costante per l'aggiunta del markup che voglio visualizzare in pagina
     const markup = `
         <div class="col-lg-4">
-            <div class="card mb-4">
+            <div class="card">
                 <img class="card-img-top" src="asset/img/${team['image']}" alt="">
                 <h4 class="">${team['name']}</h4>
                 <p class="">${team['role']}</p>
