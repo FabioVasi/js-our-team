@@ -9,6 +9,10 @@ body{
 h1{
     font-size: 4rem;
 }
+button{
+    width: 120px;
+    height: 40px;
+}
 .card{
     margin-bottom: 2rem;
     border: 1px solid black;

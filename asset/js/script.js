@@ -109,6 +109,19 @@ const newMembers = {
     image: ''
 }
 
+
+// creo una costante per selezionare il form dalla DOM
+const formElement = document.querySelector('form');
+
+// creo un evento che si attivi ad un click del pulsante in pagina
+formElement.addEventListener('submit', function(ev) {
+
+    ev.preventDefault();
+
+    console.log(ev);
+
+})
+
 // pusho i nuovi membri
 teamMembers.push(newMembers);
 
