@@ -120,6 +120,12 @@ formElement.addEventListener('submit', function(ev) {
 
     console.log(ev);
 
+    const userName = document.getElementById('user_name').value;
+
+    const userRole = document.getElementById('user_role').value;
+
+    console.log(userName, userRole);
+
 })
 
 // pusho i nuovi membri
