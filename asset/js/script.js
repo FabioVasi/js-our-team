@@ -63,6 +63,7 @@ Tools:
 - document.querySelector
 - insertAdjacentHTML
 - addEventListener
+- getElementById
 
 */
 
@@ -109,25 +110,6 @@ const newMembers = {
     image: ''
 }
 
-
-// creo una costante per selezionare il form dalla DOM
-const formElement = document.querySelector('form');
-
-// creo un evento che si attivi ad un click del pulsante in pagina
-formElement.addEventListener('submit', function(ev) {
-
-    ev.preventDefault();
-
-    console.log(ev);
-
-    const userName = document.getElementById('user_name').value;
-
-    const userRole = document.getElementById('user_role').value;
-
-    console.log(userName, userRole);
-
-})
-
 // pusho i nuovi membri
 teamMembers.push(newMembers);
 
@@ -166,3 +148,23 @@ for (let i = 0; i < teamMembers.length; i++) {
     rowDomElement.insertAdjacentHTML('beforeend', markup);
 
 }
+
+// creo una costante per selezionare il form dalla DOM
+const formElement = document.querySelector('form');
+
+// creo un evento che si attivi ad un click del pulsante in pagina
+formElement.addEventListener('submit', function(ev) {
+
+    ev.preventDefault();
+
+    console.log(ev);
+
+    const userName = document.getElementById('user_name').value;
+
+    const userRole = document.getElementById('user_role').value;
+
+    console.log(userName, userRole);
+
+    teamMembers.push(newMembers);
+
+})
