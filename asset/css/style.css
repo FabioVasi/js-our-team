@@ -9,3 +9,7 @@ body{
 h1{
     font-size: 4rem;
 }
+img{
+    height: 360px;
+    object-fit: cover;
+}

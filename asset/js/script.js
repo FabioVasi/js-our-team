@@ -109,7 +109,7 @@ const newMembers = {
 teamMembers.push(newMembers);
 
 // loggo in console i dati dei membri del team
-//console.log(teamMembers);
+console.log(teamMembers);
 
 // creo un ciclo che renda dinamica l'aggiunta dei membri
 for (let i = 0; i < teamMembers.length; i++) {
