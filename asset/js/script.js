@@ -84,7 +84,7 @@ const teamMembers = [
     {
         name: 'Angela Lopez',
         role: 'Social Media Manager',
-        image: 'angela-lopez-social-media-manager.jpg'        
+        image: 'angela-lopez-social-media-manager.jpg'
     },
     {
         name: 'Scott Estrada',
@@ -111,9 +111,12 @@ teamMembers.push(newMembers);
 // loggo in console i dati dei membri del team
 console.log(teamMembers);
 
+//seleziono degli elementi dalla DOM in cui voglio stampare le info del team
+const rowDomElement = document.querySelector('.team .row')
+
 // creo un ciclo che renda dinamica l'aggiunta dei membri
 for (let i = 0; i < teamMembers.length; i++) {
-    
+
     const team = teamMembers[i];
 
     console.log(team);
@@ -121,7 +124,57 @@ for (let i = 0; i < teamMembers.length; i++) {
     console.log(team['name']);
 
     console.log(team['role']);
-    
+
     console.log(team['image']);
+
+    // creo una costante per l'aggiunta del markup che voglio visualizzare in pagina
+    const markup = `
+        <div class="col-lg-4">
+            <div class="card mb-4">
+                <img class="card-img-top" src="./asset/img/wayne-barnett-founder-ceo.jpg" alt="">
+                <h4 class="">${team['name']}</h4>
+                <p class="">${team['role']}</p>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card">
+                <img class="card-img-top" src="./asset/img/angela-caroll-chief-editor.jpg" alt="">
+                <h4 class="">${team['name']}</h4>
+                <p class="">${team['role']}</p>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card">
+                <img class="card-img-top" src="./asset/img/walter-gordon-office-manager.jpg" alt="">
+                <h4 class="">${team['name']}</h4>
+                <p class="">${team['role']}</p>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card">
+                <img class="card-img-top" src="./asset/img/angela-lopez-social-media-manager.jpg" alt="">
+                <h4 class="">${team['name']}</h4>
+                <p class="">${team['role']}</p>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card">
+                <img class="card-img-top" src="./asset/img/scott-estrada-developer.jpg" alt="">
+                <h4 class="">${team['name']}</h4>
+                <p class="">${team['role']}</p>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card">
+                <img class="card-img-top" src="./asset/img/barbara-ramos-graphic-designer.jpg" alt="">
+                <h4 class="">${team['name']}</h4>
+                <p class="">${team['role']}</p>
+                </div>
+        </div>`
+    
+    // loggo il markup in console
+    //console.log(markup);
+
+    rowDomElement.insertAdjacentHTML('beforeend', markup);
 
 }
