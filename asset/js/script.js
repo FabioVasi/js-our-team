@@ -70,7 +70,7 @@ Tools:
 
 
 // creo un array contenente le info del team
-const teamMembers = [
+let teamMembers = [
     {
         name: 'Wayne Barnett',
         role: 'Founder & CEO',
@@ -111,7 +111,7 @@ const newMembers = {
 }
 
 // pusho i nuovi membri
-teamMembers.push(newMembers);
+//teamMembers.push(newMembers);
 
 // loggo in console i dati dei membri del team
 console.log(teamMembers);
@@ -144,7 +144,7 @@ for (let i = 0; i < teamMembers.length; i++) {
     
     // loggo il markup in console
     //console.log(markup);
-    // stampo in pagina le card partendo dalla prima in ordine c
+    // stampo in pagina le card partendo dalla prima in ordine cronologico
     rowDomElement.insertAdjacentHTML('beforeend', markup);
 
 }
@@ -163,8 +163,55 @@ formElement.addEventListener('submit', function(ev) {
 
     const userRole = document.getElementById('user_role').value;
 
-    console.log(userName, userRole);
+    const userImage = document.querySelector('.user_image').getAttribute('src');
+
+    console.log(userName, userRole, userImage);
 
     teamMembers.push(newMembers);
 
 })
+
+
+/*
+function addTeamMember(rowDomElement, teamMembers, newMembers) {
+
+    console.log(teamMembers, newMembers);
+    // creo una costante per l'aggiunta del markup che voglio visualizzare in pagina
+    const markup = `
+    <div class="col-lg-4">
+        <div class="card">
+            <img class="card-img-top" src="asset/img/${team['image']}" alt="">
+            <h4 class="">${team['name']}</h4>
+            <p class="">${team['role']}</p>
+        </div>
+    </div>`
+    
+    // loggo il markup in console
+    console.log(markup);
+    // stampo in pagina le card partendo dalla prima in ordine cronologico
+    rowDomElement.insertAdjacentHTML('beforeend', markup);
+
+}
+
+// creo una costante per selezionare il form dalla DOM
+const formElement = document.querySelector('form');
+
+// creo un evento che si attivi ad un click del pulsante in pagina
+formElement.addEventListener('submit', function(ev) {
+
+    ev.preventDefault();
+
+    console.log(ev);
+
+    const userName = document.getElementById('user_name').value;
+
+    const userRole = document.getElementById('user_role').value;
+
+    const userImage = document.querySelector('.user_image').getAttribute('src');
+
+    console.log(userName, userRole, userImage);
+
+    addTeamMember(rowDomElement, teamMembers, newMembers)
+
+})
+*/
